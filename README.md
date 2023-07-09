@@ -1,0 +1,2 @@
+# AnimeCharacterGenerator
+Generator Anime Character
