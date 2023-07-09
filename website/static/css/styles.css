@@ -1,0 +1,91 @@
+body {
+  background-color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-image {
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mainbody::-webkit-scrollbar {
+  display: none;
+}
+
+.mainbody {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.navbar {
+  height: 10%;
+  background-color: rgba(255, 112, 0);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.nav-link {
+  color: whitesmoke !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #000000;
+}
+.navbar .navbar-nav .nav-link {
+  color: #000000;
+}
+@media only screen and (min-width: 992px) {
+  .navbar .navbar-nav .nav-item {
+    margin: 0 1em;
+  }
+}
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: whitesmoke;
+  width: 0%;
+  content: "";
+  height: 4px;
+}
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  transition: all 0.5s;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    background-color: rgba(226, 73, 12, 0.8);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.btn1 {
+  background: transparent;
+  color: white;
+}
+
+.btn1:hover {
+  color: rgb(0, 51, 102);
+  transition: all 0.5s;
+}
+
+.btn2 {
+  background-color: white;
+  color: orangered !important;
+}
+
+.btn2:hover {
+  background-color: darkblue;
+  color: white !important;
+  transition: all 0.5s;
+}

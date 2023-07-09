@@ -1,0 +1,96 @@
+{% extends "base.html" %} {% block title %}Landing Page{% endblock %} {% block
+content %}
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/land.css') }}"
+/>
+
+<link
+  rel="stylesheet"
+  src="{{url_for('static', filename='images/matt.css')}}"
+/>
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/about.css') }}"
+/>
+
+<div class="container">
+  <h1 style="text-align: center; margin-top: 2%; margin-bottom: 1%">
+    About Us
+  </h1>
+  <div class="row center-content">
+    <div class="col-md-4">
+      <div class="person-box">
+        <img
+          src="https://media.macphun.com/img/uploads/customer/how-to/579/15531840725c93b5489d84e9.43781620.jpg?q=85&w=1340"
+          class="img-fluid"
+          alt="Person 1"
+        />
+        <h3>Person 1</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="person-box">
+        <img
+          src="https://media.macphun.com/img/uploads/customer/how-to/579/15531840725c93b5489d84e9.43781620.jpg?q=85&w=1340"
+          class="img-fluid"
+          alt="Person 2"
+        />
+        <h3>Person 2</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="person-box">
+        <img
+          src="https://media.macphun.com/img/uploads/customer/how-to/579/15531840725c93b5489d84e9.43781620.jpg?q=85&w=1340"
+          class="img-fluid"
+          alt="Person 3"
+        />
+        <h3>Person 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="person-box">
+        <img
+          src="https://media.macphun.com/img/uploads/customer/how-to/579/15531840725c93b5489d84e9.43781620.jpg?q=85&w=1340"
+          class="img-fluid"
+          alt="Person 4"
+        />
+        <h3>Person 4</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="person-box">
+        <img
+          src="https://media.macphun.com/img/uploads/customer/how-to/579/15531840725c93b5489d84e9.43781620.jpg?q=85&w=1340"
+          class="img-fluid"
+          alt="Person 5"
+        />
+        <h3>Person 5</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

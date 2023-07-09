@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Montserrat:wght@200&family=Roboto+Condensed:wght@300;700&family=Roboto:wght@100;300&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Roboto+Condensed:wght@300;700&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Montserrat:wght@200&family=Roboto+Condensed:wght@300;700&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <title>{% block title %}Generate{% endblock %}</title>
+    <style>
+        .dropdown-menu
+            {
+               height: 200px;
+               overflow: auto;
+            }
+    </style>
+  </head>
+
+  <body class="mainbody vh-100 overflow-hidden overflow-y-scroll">
+    <div
+      class="bg-image"
+      style="
+        background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg?w=2000');
+        height: 100vh;
+      "
+    >
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!--Logo-->
+          <a
+            class="navbar-brand fs-2 ml-lg-4"
+            style="
+              font-family: 'Cairo', sans-serif;
+              color: whitesmoke;
+              background-color: transparent;
+              box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.37);
+              padding-left: 1%;
+              padding-right: 1%;
+            "
+            href="/"
+            >K A N O N N E T ツ</a
+          >
+          <!--Toggle Bar-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Side Bar-->
+          <div
+            class="sidebar offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <!--Side Bar Header-->
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                K A N O N N E T
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white shadow-none"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!--Side Bar Body-->
+            <div class="offcanvas-body d-flex">
+              <ul
+                class="navbar-nav justify-content-start align-items-center fs-5 flex-grow-1 pe-3 fs-3"
+                style="font-family: 'Ubuntu', sans-serif"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active mx-lg-3"
+                    aria-current="page"
+                    href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-3" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-3" href="/contact">Contacts</a>
+                </li>
+              </ul>
+              <div class="d-flex flex-column p-4  mr-5 align-content-center">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn bg-transparent text-white"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="50"
+                      height="50"
+                      fill="currentColor"
+                      class="bi bi-person-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a  class="dropdown-item fs-5" style="font-family: 'Cairo', sans-serif" type="button" href="/profile">Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item fs-5" style="font-family: 'Cairo', sans-serif" href="/">Log out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <!--Left Col-->
+          <div class="col-md-7 bg-transparent mt-5 overflow: hidden; height: fit-content">
+            <div class="imgxd mt-5 mx-5 overflow: hidden; height: fit-content p-1 bg-black rounded-3" id="imageContainer" >
+              <img
+                src="https://thecinemaholic.com/wp-content/uploads/2021/01/nezuu-e1638963260523.jpg"
+                id="generatedImage"
+                class="img-fluid rounded-3"
+                alt="imgxd"
+              />
+            </div>
+            <div class="button-div mt-3 text-center">
+              <button class="btn text-white mt-4 mb-2 generate-button" id="generateButton">
+                Generate Image
+              </button>
+              <br/>
+            <button class="btn mb-2" style="font-size: 15px; font-family: 'Cairo', sans-serif; background: transparent; color: orangered;">
+              Save Image
+            </button>
+            </div>
+          </div>
+
+          <!--Right Col-->
+          <div class="col-md-5 d-flex bg-transparent mt-lg-5 mt-sm-3">
+            <div class="button-div mt-lg-5">
+              <div class="dropdown" id="ModelType" >
+                <label for="dropdownButtonAbove" style="font-size: 15px; font-family: 'Ubuntu', sans-serif;">Model</label>
+                <br />
+                <button class="btn bg-secondary text-white dropdown-toggle mb-3" type="button" id="dropdownButtonAbove" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 17px; font-family: 'Ubuntu', sans-serif;">
+                  <span id="selectedOption">Kanon Net Original</span>
+                </button>
+                <div class="dropdown-menu" style="font-family: 'Ubuntu', sans-serif;" aria-labelledby="dropdownButtonAbove">
+                  <a class="dropdown-item dropdown-option" href="#">KanonNet Original</a>
+                  <a class="dropdown-item dropdown-option" href="#">KanonNet Colored Alpha</a>
+                  <a class="dropdown-item dropdown-option" href="#">KanonNet Colored Beta</a>
+                  <a class="dropdown-item dropdown-option" href="#">KanonNet Colored Mobile</a>
+                </div>
+              </div>
+              
+              <div class="d-flex justify-content-between mt-3">
+                <div class="dropdown">
+                  <label for="dropdownButton1" style="font-size: 15px; font-family: 'Ubuntu', sans-serif;"
+                    >Hair Color</label
+                  >
+                  <br />
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownButton1"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    style="font-size: 17px; font-family: 'Ubuntu', sans-serif;"
+                  >
+                  <span id="selectedOption">Hair Color 1</span>
+                  </button>
+                  <div class="dropdown-menu"  style="font-family: 'Ubuntu', sans-serif;" aria-labelledby="dropdownButton1">
+                    <a class="dropdown-item dropdown-option" href="#">Random</a>
+                    <a class="dropdown-item dropdown-option" href="#">blonde hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">brown hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">black hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">blue hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">pink hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">purple hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">green hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">red hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">silver hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">white hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">orange hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">aqua hair</a>
+                    <a class="dropdown-item dropdown-option" href="#">grey hair</a>
+                  </div>
+                </div>
+                <div class="dropdown offset-3">
+                  <label for="dropdownButton2" style="font-size: 15px; font-family: 'Ubuntu', sans-serif;"
+                    >Eye Color</label
+                  >
+                  <br />
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownButton2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    style="font-size: 17px; font-family: 'Ubuntu', sans-serif;"
+                  >
+                  <span id="selectedOption">Eye Color 1 </span>
+                  </button>
+                  <div class="dropdown-menu" style="font-family: 'Ubuntu', sans-serif;" aria-labelledby="dropdownButton2">
+                    <a class="dropdown-item dropdown-option" href="#">Random</a>
+                    <a class="dropdown-item dropdown-option" href="#">blue eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">red eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">brown eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">green eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">purple eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">yellow eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">pink eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">aqua eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">black eyes</a>
+                    <a class="dropdown-item dropdown-option" href="#">orange eyes</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3 mb-3 ">
+                <label for="slider-range" style="font-size: 15px; font-family: 'Ubuntu', sans-serif;">Style </label>
+                <br />
+                <input
+                  type="range"
+                  id="slider-range"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="50"
+                  style="width: 100%; font-family: 'Ubuntu', sans-serif;"
+                />
+              </div>
+              <label for="noise" style="font-size: 15px; font-family: 'Ubuntu', sans-serif;">Noise</label> </br>
+              <div
+                class="btn-group btn-group-toggle mt-1 mb-3"
+                data-toggle="buttons"
+              >
+                <label class="btn btn-secondary active">
+                  <span class="title" style="font-size: 17px; font-family: 'Ubuntu', sans-serif;">Random</span>
+                  <input
+                    type="radio"
+                    name="options"
+                    id="random"
+                    autocomplete="off"
+                    checked
+                  />
+                </label>
+                <label class="btn btn-secondary">
+                  <span class="title" style="font-size: 17px; font-family: 'Ubuntu', sans-serif;">Fixed</span>
+                  <input
+                    type="radio"
+                    name="options"
+                    id="fixed"
+                    autocomplete="off"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          const loggedIn = localStorage.getItem("logged");
+          if (!loggedIn) {
+            const generateRandomString = (length) => [...Array(length)].map(() => Math.random().toString(36)[2]).join('');
+            const randomString = generateRandomString(10);
+            localStorage.setItem("logged", randomString);
+          }
+          // Get all dropdowns on the page
+          const dropdowns = $(".dropdown");
+      
+          // Loop through each dropdown
+          dropdowns.each(function () {
+            const dropdown = $(this);
+            const dropdownButton = dropdown.find(".dropdown-toggle");
+            const selectedOption = dropdown.find("#selectedOption");
+      
+            // Check if a previously selected option is stored in local storage
+            const storedOption = localStorage.getItem(dropdownButton.attr("id"));
+            if (storedOption) {
+              // Set the default value to the previously selected option
+              selectedOption.text(storedOption);
+              dropdownButton.attr("data-selected", storedOption);
+            }
+      
+            // Event delegation for dynamically added dropdown items
+            dropdown.on("click", ".dropdown-item", function () {
+              const optionText = $(this).text();
+              selectedOption.text(optionText);
+              dropdownButton.attr("data-selected", optionText);
+              localStorage.setItem(dropdownButton.attr("id"), optionText);
+              console.log(optionText);
+              console.log(localStorage);
+            });
+          });
+        });
+      </script>
+      <script>
+         $(document).ready(function () {
+          $("#generateButton").click(function () {
+            // Make AJAX request to the server
+            const radioButtons = document.getElementsByName('options');
+            let selectedValue;
+
+            for (let i = 0; i < radioButtons.length; i++) {
+              if (radioButtons[i].checked) {
+                selectedValue = radioButtons[i].id;
+                break;
+              }
+            }
+            console.log(selectedValue);
+            $.ajax({
+              url: "/generate-image", // Replace with your server endpoint
+              method: "POST", // Or "GET" depending on your server implementation
+              data: {
+                'model': localStorage.getItem("dropdownButtonAbove"),
+                'hair color': localStorage.getItem("dropdownButton1"),
+                'eye color': localStorage.getItem("dropdownButton2"),
+                'userId': localStorage.getItem("logged"),
+                'noise': selectedValue
+              },
+              success: function (response) {
+                console.log(response);
+                // Update the image container with the received base64 image
+                $("#imageContainer").html("<img src='data:image/jpeg;base64," + response + "' alt='Generated Image' class='img-fluid rounded-3'>");
+              },
+              error: function (error) {
+                console.log(error);
+              },
+            });
+          });
+        });
+      </script>
+      
+      
+      
+    </div>
+  </body>
+</html>

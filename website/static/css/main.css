@@ -1,0 +1,27 @@
+.container {
+  margin-top: 4%;
+  background: rgb(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.generate-button {
+  font-size: 20px;
+  font-family: "Cairo", sans-serif;
+  background-color: rgba(226, 73, 12, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.generate-button:hover {
+  background-color: rgba(226, 73, 12, 1);
+  transform: scale(1.05);
+}

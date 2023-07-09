@@ -1,0 +1,6 @@
+Flask==2.3.2
+matplotlib==3.7.2
+numpy==1.25.0
+Pillow==10.0.0
+Pillow==10.0.0
+torch==2.0.1+cu117

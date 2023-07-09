@@ -1,0 +1,22 @@
+.container {
+  margin-top: 5%;
+}
+
+.center-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.person-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.person-box img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 30%;
+  margin-bottom: 20px;
+}
